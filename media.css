@@ -1,0 +1,75 @@
+@media (max-width : 1025px){
+    .input{
+        padding: 0.5rem;
+    }
+    .secondary-heading{
+        font-size: 2rem;
+    }
+    .submitBtn{
+        padding: 0.5rem;
+    }
+    .value-result{
+        padding: 0.5rem;
+        font-size: 1.4rem;
+    }
+    .label--update{
+        font-size: 1.4rem;
+    }
+    .prev_act_vel1,.prev_act_flow1,.prev_act_flow2,.prev_act_vel2{
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media (max-width : 769px){
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .navigator-contianer{
+        grid-column: 1/4;
+    }
+    .display-contianer{
+        grid-column: 4/13;
+    }
+}
+
+@media (max-width : 426px){
+    .header-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .display-container-main-working-single-pipe,.display-container-main-working-double-pipe{
+        display: flex;
+        flex-direction: column;
+    }
+    .navBtn{
+        display: inline-block;
+    }
+    .header-box{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navBtn{
+        width: 20vh;
+    }
+}
+
+@media (max-width : 376px){
+    .navBtn{
+        width: 20vh;
+        font-size: 1.2rem;
+    }
+    .design-pipe-double, .design-pipe{
+        height: 10vh;
+        width: 10vh;
+    }   
+    .secondary-heading{
+        font-size: 1.8rem;
+        border-bottom: 0.3rem solid #00204A;
+    }
+    .primary-heading{
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }}

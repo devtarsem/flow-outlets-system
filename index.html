@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fluid flow analysis &dash; with mutiple outlets</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="media.css">
+
+        <link rel="icon" href="logo.png">
+        <script src="singlePipe.js" async></script>
+        <script src="doublePipe.js" async></script>
+
+    </head>
+    <body>
+        <main class="main-header">
+            <section class="header-container grid grid-12-cols">
+                <div class="navigator-contianer flex flex-dir gap16 pad16 flex-align">
+                    <div class="header-box flex flex-dir flex-1 gap08">
+                        <img src="logo.png" class="logo" alt="logo"/>
+                        <h1 class="primary-heading">Fluid analysis with multiple outlets</h1>
+                    </div>
+                    <div class="header-box flex flex-dir flex-1 gap08">
+                        <button class="navBtn singleBtn">Single outlet</button>
+                        <button class="navBtn doubleBtn">Two outlet</button>
+                    </div>
+                </div>
+                <div class="display-contianer">
+                  
+                    <div class="display-container-main-working-double-pipe grid grid-6-cols">
+                        <div class="form-container pad16">
+                            <form class="form pad16 grid grid-2-cols gap16">
+                                <div class="flex flex-2 gap08 head">
+                                    <h2 class="secondary-heading">Double Pipe Analysis</h2>
+                                    <div class="design-pipe-double"></div>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label" for="density1">density of material flowing</label>
+                                    <input class="input input--update density2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">diameter of outer pipe 1</label>
+                                    <input class="input input--update dia1pipe1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">diameter of outer pipe 2</label>
+                                    <input class="input input--update dia1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">diameter of main pipe</label>
+                                    <input class="input input--update dia1pipe2MAIN" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">velocity(v1)</label>
+                                    <input class="input input--update v1Pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">pressure at tank (p1)</label>
+                                    <input class="input input--update p1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">pressure at tank (p2)</label>
+                                    <input class="input input--update p2pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Top elevation(z1)</label>
+                                    <input class="input input--update z1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Top elevation(z2) of pipe 1</label>
+                                    <input class="input input--update z3pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Top elevation(z3) of pipe 2</label>
+                                    <input class="input input--update z4pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Roughness of outer pipe 1</label>
+                                    <input class="input input--update k1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Roughness of outer pipe 2</label>
+                                    <input class="input input--update k2pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Length of pipe</label>
+                                    <input class="input input--update length1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Viscosity</label>
+                                    <input class="input input--update viscosity1pipe2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Submit</label>
+                                    <button class="submitBtn input--update doublePipeSubmit">Let's calculate</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="result-container pad16 flex flex-dir gap16">
+                            <div class="flex flex-2 flex-dir gap48 head pad16">
+                                <h2 class="tertiary-heading">Result</h2>
+                                <div class="result-panel flex flex-dir gap16">
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet velocity of pipe 1</label>
+                                        <p class="value-result actVelDoublePipe">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet velocity of pipe 2</label>
+                                        <p class="value-result actualDoublePipeVel">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet flow rate of pipe 1</label>
+                                        <p class="value-result actFlowDoublePipe">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet flowrate of pipe 2</label>
+                                        <p class="value-result actualDoublePipeFlow">4585</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prev-results flex flex-dir gap08">
+                                <h2 class="fouth-heading">Prev Result</h2>
+                                <p class="prev_act_vel1"></p>
+                                <p class="prev_act_flow1"></p>
+                                <p class="prev_act_flow2"></p>
+                                <p class="prev_act_vel2"></p>
+                            </div> 
+                        </div>
+                    </div>
+
+                    <div class="display-container-main-working-single-pipe grid grid-6-cols">
+                        <div class="form-container pad16">
+                            <form class="form pad16 grid grid-2-cols gap16">
+                                <div class="flex flex-2 gap08 head">
+                                    <h2 class="secondary-heading">Single Pipe Analysis</h2>
+                                    <div class="design-pipe"></div>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label" for="density1">density of material flowing</label>
+                                    <input class="input density1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">diameter of pipe</label>
+                                    <input class="input dia1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">velocity(v1)</label>
+                                    <input class="input v1" placeholder="5"/>
+                                </div>
+                                
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">pressure at tank (p1)</label>
+                                    <input class="input p1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">pressure at tank (p2)</label>
+                                    <input class="input p2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Top elevation(z1)</label>
+                                    <input class="input z1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Top elevation(z2)</label>
+                                    <input class="input z2" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Roughness of outer pipe</label>
+                                    <input class="input k1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Length of pipe</label>
+                                    <input class="input length1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Viscosity</label>
+                                    <input class="input viscosity1" placeholder="5"/>
+                                </div>
+                                <div class="flex flex-dir gap08">
+                                    <label class="label">Submit</label>
+                                    <button class="submitBtn singlePipeSubmit">Let's calculate</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="result-container result-one-pipe pad16 flex flex-dir gap16">
+                            <div class="flex flex-2 flex-dir gap48 head pad16">
+                                <h2 class="tertiary-heading">Result</h2>
+                                <div class="result-panel flex flex-dir gap16">
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Max outlet velocity</label>
+                                        <p class="value-result maxVelSinglePipe">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet velocity</label>
+                                        <p class="value-result actualSinglePipeVel">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Max outlet flow rate</label>
+                                        <p class="value-result maxFlowSinglePipe">4585</p>
+                                    </div>
+                                    <div class="credential flex flex-dir gap08">
+                                        <label class="label label--update">Actual outlet flowrate</label>
+                                        <p class="value-result actualSinglePipeFlow">4585</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prev-results flex flex-dir gap08">
+                                <h2 class="fouth-heading">Prev Result</h2>
+                                <p class="prev_max_vel"></p>
+                                <p class="prev_max_flow"></p>
+                                <p class="prev_act_flow"></p>
+                                <p class="prev_act_vel"></p>
+                            </div>    
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p class="copyright">@copyright claimed by tarsem singh under Dr. Raj Kumar Arya </p>
+    </footer>
+</html>
